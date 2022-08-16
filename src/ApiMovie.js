@@ -3,7 +3,7 @@ const API_URL = "https://api.themoviedb.org/3/";
 
 const fetchMovies = async (endpoint) => {
     return await fetch(
-        `${API_URL}{endpoint}&language=fr-FR&api_key=${API_KEY}`
+        `${API_URL}${endpoint}?language=fr-FR&api_key=${API_KEY}`
     ).then((response) => response.json())
     
 }
@@ -24,7 +24,7 @@ export default {
             {
                 slug: "action",
                 title: "Action",
-                items: await fetchMovies("movie?with_genres=28"),
+                items: await fetchMovies("discover/movie?with_genres=28"),
             }
         ]
     }

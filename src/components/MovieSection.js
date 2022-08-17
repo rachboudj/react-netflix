@@ -1,10 +1,11 @@
 import React from 'react';
 import "./MovieSection.css";
 
-function MovieSection() {
+function MovieSection({title, items}) {
     return (
         <div>
-            MovieSection
+            <h2>{title}</h2>
+            <div className='movieRow--listarea'></div>
         </div>
     );
 }

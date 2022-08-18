@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="container">
-      <section className="list">
+      <section className="netflix">
         {
           movieList.map((item, key) => (
             <MovieSection key={key} title={item.title} items={item.items}/>
